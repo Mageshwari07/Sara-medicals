@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1769aa">
+  <title>Sara Medicals | Everyday Care, Made Simple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The blue header contains the site name and main navigation. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Sara Medicals home">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>Sara <strong>Medicals</strong></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <button class="nav-sign-in" id="openSignInButton" type="button">Sign In</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Welcome section and age selection. -->
+    <section class="hero page-width" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR EVERYDAY HEALTH, OUR PRIORITY</p>
+        <h1>Care that feels<br><span>closer to home.</span></h1>
+        <p class="hero-description">Find everyday essentials for you and your family, all in one simple place.</p>
+        <a class="button button-primary hero-button" href="#age-groups">Find your essentials <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-circle">
+          <span class="hero-plus">+</span>
+          <span class="hero-heart">♡</span>
+        </div>
+        <span class="art-dot dot-one"></span>
+        <span class="art-dot dot-two"></span>
+        <span class="art-dot dot-three"></span>
+        <div class="hero-note"><span class="note-check">✓</span> Here for your health</div>
+      </div>
+    </section>
+
+    <section class="section page-width age-section" id="age-groups">
+      <div class="section-heading">
+        <p class="eyebrow">A GOOD PLACE TO START</p>
+        <h2>Select Age Group</h2>
+        <p>Choose an age range to get started with your order.</p>
+      </div>
+      <div class="age-options" role="group" aria-label="Choose an age group">
+        <button class="age-card" type="button" data-age="Age 1 – 10"><span class="age-icon" aria-hidden="true">✿</span><span>Age 1 – 10</span></button>
+        <button class="age-card" type="button" data-age="Age 11 – 20"><span class="age-icon" aria-hidden="true">☼</span><span>Age 11 – 20</span></button>
+        <button class="age-card" type="button" data-age="Age 21 – 35"><span class="age-icon" aria-hidden="true">♡</span><span>Age 21 – 35</span></button>
+        <button class="age-card" type="button" data-age="Age 36 – 50"><span class="age-icon" aria-hidden="true">✚</span><span>Age 36 – 50</span></button>
+        <button class="age-card" type="button" data-age="Age 51 – 80"><span class="age-icon" aria-hidden="true">❋</span><span>Age 51 – 80</span></button>
+      </div>
+      <div class="selection-row">
+        <p class="selection-message" id="ageMessage" aria-live="polite">Select an age group to continue.</p>
+        <a class="button button-primary continue-button is-disabled" id="continueButton" href="#products" aria-disabled="true">Continue to Products <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- Product quantities and totals are updated by script.js. -->
+    <section class="section products-section" id="products">
+      <div class="page-width">
+        <div class="section-heading">
+          <p class="eyebrow">A FEW EVERYDAY ESSENTIALS</p>
+          <h2>Shop Medical Products</h2>
+          <p>Choose the items you need and adjust the quantity.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-illustration illustration-blue" aria-hidden="true"><span class="pill-shape">+</span></div>
+            <div class="product-info">
+              <p class="product-category">PAIN &amp; FEVER</p>
+              <h3>Paracetamol</h3>
+              <div class="product-bottom"><span class="price">₹50</span><div class="quantity-control" aria-label="Paracetamol quantity"><button class="quantity-button" type="button" data-product="0" data-change="-1" aria-label="Remove one Paracetamol">−</button><span class="quantity" id="quantity-0" aria-live="polite">0</span><button class="quantity-button" type="button" data-product="0" data-change="1" aria-label="Add one Paracetamol">+</button></div></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-illustration illustration-green" aria-hidden="true"><span class="vitamin-shape">✚</span></div>
+            <div class="product-info">
+              <p class="product-category">DAILY WELLNESS</p>
+              <h3>Vitamin Tablets</h3>
+              <div class="product-bottom"><span class="price">₹100</span><div class="quantity-control" aria-label="Vitamin Tablets quantity"><button class="quantity-button" type="button" data-product="1" data-change="-1" aria-label="Remove one Vitamin Tablets">−</button><span class="quantity" id="quantity-1" aria-live="polite">0</span><button class="quantity-button" type="button" data-product="1" data-change="1" aria-label="Add one Vitamin Tablets">+</button></div></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-illustration illustration-peach" aria-hidden="true"><span class="bottle-shape"><span></span></span></div>
+            <div class="product-info">
+              <p class="product-category">COLD &amp; COUGH</p>
+              <h3>Cough Syrup</h3>
+              <div class="product-bottom"><span class="price">₹80</span><div class="quantity-control" aria-label="Cough Syrup quantity"><button class="quantity-button" type="button" data-product="2" data-change="-1" aria-label="Remove one Cough Syrup">−</button><span class="quantity" id="quantity-2" aria-live="polite">0</span><button class="quantity-button" type="button" data-product="2" data-change="1" aria-label="Add one Cough Syrup">+</button></div></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-illustration illustration-lavender" aria-hidden="true"><span class="balm-shape">CARE</span></div>
+            <div class="product-info">
+              <p class="product-category">SOOTHING RELIEF</p>
+              <h3>Pain Relief Balm</h3>
+              <div class="product-bottom"><span class="price">₹70</span><div class="quantity-control" aria-label="Pain Relief Balm quantity"><button class="quantity-button" type="button" data-product="3" data-change="-1" aria-label="Remove one Pain Relief Balm">−</button><span class="quantity" id="quantity-3" aria-live="polite">0</span><button class="quantity-button" type="button" data-product="3" data-change="1" aria-label="Add one Pain Relief Balm">+</button></div></div>
+            </div>
+          </article>
+        </div>
+
+        <section class="order-summary" aria-labelledby="summaryTitle">
+          <div class="summary-title">
+            <div class="summary-icon" aria-hidden="true">▤</div>
+            <div><h3 id="summaryTitle">Order Summary</h3><p>Your selected essentials</p></div>
+          </div>
+          <div class="summary-values">
+            <p>Total Items <strong id="totalItems">0</strong></p>
+            <p>Total Amount <strong id="totalAmount">₹0</strong></p>
+          </div>
+          <button class="button button-primary" id="proceedButton" type="button">Proceed to Payment <span aria-hidden="true">→</span></button>
+        </section>
+      </div>
+    </section>
+
+    <!-- The payment demo is shown after the customer proceeds. -->
+    <section class="section payment-section page-width is-hidden" id="payment">
+      <div class="payment-card">
+        <div class="payment-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">ONE LAST STEP</p>
+        <h2>Payment</h2>
+        <p class="payment-description">This is a frontend demo. No real payment will be taken.</p>
+        <button class="button button-primary" id="payNowButton" type="button">Pay Now</button>
+        <p class="success-message is-hidden" id="paymentSuccess" aria-live="polite">Thank you for shopping with Sara Medicals.</p>
+      </div>
+    </section>
+
+    <!-- Contact details are displayed in the footer. -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-inner page-width">
+        <div class="footer-about">
+          <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">+</span><span>Sara <strong>Medicals</strong></span></a>
+          <p>Everyday care, made a little simpler.</p>
+        </div>
+        <div class="contact-details">
+          <h2>Contact</h2>
+          <p><span>Phone</span> <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+          <p><span>Email</span> <a href="mailto:saramedicals@example.com">saramedicals@example.com</a></p>
+          <p><span>Address</span> Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Sara Medicals. Made with care.</p></div>
+    </footer>
+  </main>
+
+  <!-- A simple sign-in dialog for the frontend demo. -->
+  <div class="modal-backdrop is-hidden" id="signInModal">
+    <section class="sign-in-modal" role="dialog" aria-modal="true" aria-labelledby="signInTitle">
+      <button class="close-modal" id="closeSignInButton" type="button" aria-label="Close sign in">×</button>
+      <div class="modal-icon" aria-hidden="true">+</div>
+      <p class="eyebrow">WELCOME BACK</p>
+      <h2 id="signInTitle">Sign In</h2>
+      <p class="modal-description">Sign in to continue to your account.</p>
+      <form id="signInForm" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password">
+        <button class="button button-primary sign-in-submit" type="submit">Sign In</button>
+        <p class="form-message" id="signInMessage" aria-live="polite"></p>
+      </form>
+      <p class="demo-note">Frontend demo only. No account details are stored.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
